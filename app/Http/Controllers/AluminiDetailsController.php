@@ -6,11 +6,6 @@ use Illuminate\Http\Request;
 
 class AluminiDetailsController extends Controller
 {
-	public function getAluminiList()
-	{
-		//$data = \App\AluminiDetailsController::orderBy
-	}
-
     public function getAluminiRegister()
     {
     	return view('alumini-register');
