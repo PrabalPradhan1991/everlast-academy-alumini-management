@@ -72,6 +72,7 @@
 				@endforeach
 			</span>
 		@endif
+		
 		<br/>
 		<label>Position</label>
 		<input type="text" name="position" value="{{ request()->old('position') }}"/>
