@@ -52,3 +52,7 @@ Route::post('admin/publish-unpublish-alumini/{alumini_id}/{status}',
 ['as'	=>	'admin-publish-unpublish-alumini-post',
  'uses'	=>	'AdminController@postPublishUnpublishAlumini',
  'middleware'	=>	'auth']);
+
+Route::get('alumini-view',
+['uses'	=>	'AluminiDetailsController@getAluminiView',
+ 'as'	=>	'alumini-view-get']);

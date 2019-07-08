@@ -8,7 +8,7 @@ class AluminiDetailsController extends Controller
 {
     public function getAluminiRegister()
     {
-    	return view('alumini-register');
+    	return view('alumini.register');
     }
 
     public function postAluminiRegister()
@@ -50,6 +50,18 @@ class AluminiDetailsController extends Controller
     	\Session::flash('success-msg', 'You have successfully registered');
 
     	return redirect()->back();
+    }
+
+    public function getAluminiView()
+    {
+        $alumini_details_table = (new \App\AluminiDetailsModel)->getTable();
+        $data = \DB::table($alumini_details_table)
+                    ->where('is_verified', 'yes')
+                    ->orderBy('name', 'ASC')
+                    ->paginate(20);
+
+        return view('alumini-view')
+                ->with('data', $data);
     }
 
 }
