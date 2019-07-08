@@ -18,7 +18,8 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard($guard)->check()) {
-            return redirect('/home');
+            \Session::flash('warning-msg', 'You have already logged in!');
+            return redirect()->route('admin-alumini-list-get');
         }
 
         return $next($request);

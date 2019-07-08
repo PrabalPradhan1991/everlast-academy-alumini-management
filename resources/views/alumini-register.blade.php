@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Alumini Register</title>
-</head>
-<body>
-	@if(\Session::has('success-msg'))
-		<p>{{ \Session::get('success-msg') }}</p>
-	@endif
-	@if(\Session::has('error-msg'))
-		<p>{{ \Session::get('error-msg') }}</p>
-	@endif
+@extends('main')
+
+@section('page-title')
+	Alumini Register
+@stop
+
+@section('content')
 	<form method="post">
 		<input type="hidden" autocomplete="off">
 		<label>Email</label>
@@ -87,5 +82,4 @@
 		<input type="submit" value="Register">
 		{{ csrf_field() }}
 	</form>
-</body>
-</html>
+@stop
