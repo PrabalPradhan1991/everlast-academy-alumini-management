@@ -28,7 +28,7 @@ class AdminController extends Controller
 
 	public function getAdminAluminiList()
 	{
-		$alumini_table = (new \App\AluminiDetailsModel)->getTable();
+		$alumini_table = (new \App\UserDetailsModel)->getTable();
 		$data = \DB::table($alumini_table)
 					->orderBy('name', 'ASC')
 					->paginate(20);
@@ -39,7 +39,7 @@ class AdminController extends Controller
 
 	public function postPublishUnpublishAlumini($alumini_id, $status)
 	{
-		$data = \App\AluminiDetailsModel::where('id', $alumini_id)->firstOrFail();
+		$data = \App\UserDetailsModel::where('id', $alumini_id)->firstOrFail();
 
 		if($status == $data->is_verified)
 		{

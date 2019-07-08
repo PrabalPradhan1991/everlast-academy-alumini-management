@@ -11,6 +11,8 @@
 |
 */
 
+require_once('constants.php');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -24,9 +26,25 @@ Route::post('alumini/register',
 ['as'	=>	'alumini-register-post',
  'uses'	=>	'AluminiDetailsController@postAluminiRegister']);
 
-Route::get('alumini/list',
-['as'	=>	'alumini-list-get',
- 'uses'	=>	'AluminiDetailsController@getAluminiList']);
+Route::get('alumini/view',
+['as'	=>	'alumini-view-get',
+ 'uses'	=>	'AluminiDetailsController@getAluminiView']);
+
+Route::get('alumini/login',
+['as'	=>	'alumini-login-get',
+ 'uses'	=>	'AluminiDetailsController@getAluminiLogin']);
+
+Route::post('alumini/login',
+['as'	=>	'alumini-login-post',
+ 'uses'	=>	'AluminiDetailsController@postAluminiLogin']);
+
+Route::get('alumini/edit',
+['as'	=>	'alumini-edit-get',
+ 'uses'	=>	'AluminiDetailsController@getAluminiEdit']);
+
+Route::post('alumini/edit',
+['as'	=>	'alumini-edit-post',
+ 'uses'	=>	'AluminiDetailsController@postAluminiEdit']);
 
 Route::get('admin/login',
 ['as'	=>	'admin-login-get',

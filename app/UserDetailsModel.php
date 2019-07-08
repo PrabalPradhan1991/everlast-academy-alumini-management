@@ -4,16 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class AluminiDetailsModel extends Model
+class UserDetailsModel extends Model
 {
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
-    public $table = 'alumini_details';
+    public $table = 'user_details';
 
     public function rules($id=0)
     {
     	$rules = [
-    		'email'	=>	['required', 'unique:alumini_details,email,'.$id ],
+    		'email'	=>	['required', 'unique:users,email,'.$id ],
     		'password'	=>	['required', 'min:6'],
     		'name'	=>	['required', 'alpha'],
     		'batch'	=>	['required'],
