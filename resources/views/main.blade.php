@@ -7,27 +7,21 @@
 <body>
 	<div class="container">
 		@if(\Session::has('success-msg'))
-		<div class="alert alert-success alert-dismissible fade show" role="alert">
+		<div class="alert alert-success alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			<p>{{ \Session::get('success-msg') }}</p>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
 		</div>
 		@endif
 		@if(\Session::has('error-msg'))
-		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+		<div class="alert alert-danger alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			<p>{{ \Session::get('error-msg') }}</p>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
 		</div>
 		@endif
 		@if(\Session::has('warning-msg'))
-		<div class="alert alert-warning alert-dismissible fade show" role="alert">
+		<div class="alert alert-warning alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			<p>{{ \Session::get('warning-msg') }}</p>
-			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
 		</div>
 		@endif
 	</div>
@@ -37,6 +31,7 @@
 			@yield('content')
 		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>
