@@ -1,7 +1,15 @@
 @extends('main')
 
 @section('content')
-	
+
+<div class="content">	
+	@if(!(\Session::get('alumini_id')))
+		<a href="{{ route('alumini-login-get') }}" class="btn btn-info btn-flat">Login</a>
+		<a href="{{ route('alumini-register-get') }}" class="btn btn-info btn-flat">Register</a>
+	@else
+		<a href="{{ route('alumini-edit-get') }}" class="btn btn-info btn-flat">Edit My Details</a>
+	@endif
+</div>
 	<div class="row">
 		@foreach($data as $d)
 		<div class="col-md-4">

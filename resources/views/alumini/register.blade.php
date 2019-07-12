@@ -5,7 +5,10 @@
 @stop
 
 @section('content')
-	<form method="post">
+	<div class="content">
+		<a href="{{ route('alumini-view-get') }}" class="btn btn-info btn-flat">View Alumini</a>
+	</div>
+	<form method="post" class="pra_form_submit">
 		<input type="hidden" autocomplete="off">
 		<label>Email</label>
 		<input type="email" name="email" value="{{ request()->old('email') }}"/>
@@ -82,4 +85,23 @@
 		<input type="submit" value="Register">
 		{{ csrf_field() }}
 	</form>
+
+	<script>
+		$(function()
+		{
+			var no_of_times = 0
+			$('.pra_form_submit').on('submit', function(e)
+			{
+				if(no_of_times == 0)
+				{
+					no_of_times++;
+				}
+				else
+				{
+					alert('You have already submitted the form. Please wait');
+					return false;
+				}
+			})
+		})
+	</script>
 @stop

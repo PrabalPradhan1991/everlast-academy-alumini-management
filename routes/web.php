@@ -46,6 +46,14 @@ Route::post('alumini/edit',
 ['as'	=>	'alumini-edit-post',
  'uses'	=>	'AluminiDetailsController@postAluminiEdit']);
 
+Route::get('success-register',
+['as'	=>	'success-register-get',
+ 'uses'	=>	'AluminiDetailsController@getSuccessRegister']);
+
+Route::get('alumini/list',
+['as'	=>	'alumini-list-get',
+ 'uses'	=>	'AluminiDetailsController@getAluminiList']);
+
 Route::get('admin/login',
 ['as'	=>	'admin-login-get',
  'uses'	=>	'AdminController@getLogin',
@@ -70,3 +78,27 @@ Route::post('admin/publish-unpublish-alumini/{alumini_id}/{status}',
 ['as'	=>	'admin-publish-unpublish-alumini-post',
  'uses'	=>	'AdminController@postPublishUnpublishAlumini',
  'middleware'	=>	'auth']);
+
+Route::get('alumini-view',
+['uses'	=>	'AluminiDetailsController@getAluminiView',
+ 'as'	=>	'alumini-view-get']);
+
+Route::get('alumini/login',
+['as'	=>	'alumini-login-get',
+ 'uses'	=>	'AluminiDetailsController@getLogin'])->middleware(['check_if_alumini_not_logged_in']);
+
+Route::post('alumini/login',
+['as'	=>	'alumini-login-post',
+ 'uses'	=>	'AluminiDetailsController@postLogin'])->middleware(['check_if_alumini_not_logged_in']);
+
+Route::post('alumini/logout',
+['as'	=>	'alumini-logout-post',
+ 'uses'	=>	'AluminiDetailsController@postLogout'])->middleware(['check_if_alumini_logged_in']);
+
+Route::get('alumini/edit',
+['as'	=>	'alumini-edit-get',
+ 'uses'	=>	'AluminiDetailsController@getAluminiEdit'])->middleware(['check_if_alumini_logged_in']);
+
+Route::post('alumini/edit',
+['as'	=>	'alumini-edit-post',
+ 'uses'	=>	'AluminiDetailsController@postAluminiEdit'])->middleware(['check_if_alumini_logged_in']);
