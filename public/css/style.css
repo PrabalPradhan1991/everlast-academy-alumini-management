@@ -1,0 +1,47 @@
+/* --------------------------------------------------------
+Style Sheet for Almuni
+version: 1.0
+last modified: 15.7.2019 by Ashim Rai
+author: Ashim Rai
+email: ashimrai868@gmail.com
+Company Name: ;
+----------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+body{font-family: 'Nunito', sans-serif !important;}
+ h1{font-family: 'Nunito' !important; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: 'Nunito' !important; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: 'Nunito' !important; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: 'Nunito' !important; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: 'Nunito' !important; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+.everlast-bg{background: #374785 !important; border: none !important; border-radius: 0px; color: #fff !important; transition: 0.4s all;}
+.everlast-bg .navbar-brand, .everlast-bg .navbar-nav li,  .everlast-bg .navbar-nav li a {color: #fff; font-size:18px; text-transform:uppercase;transition: 0.4s all;}
+.everlast-bg .navbar-brand:hover, .everlast-bg .navbar-nav li:hover,  .everlast-bg .navbar-nav li a:hover{ color: #a8d1e7; } 
+.col-centered{margin: 0 auto; float: none;}
+.navbar {
+    position: relative;
+}
+.brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px !important;
+    display: block;
+}
+.almuni-card{width: 100%; box-shadow: 5px 5px 7px #aaaaaa;  transition: all 0.4s; cursor: pointer;}
+.almuni-card:hover{box-shadow: 10px 10px 5px #aaaaaa;}
+.almuni-header{color: #374785; font-size: 24px; text-align: center; font-weight: bold;}
+.btn-almuni{width:100% !important; background: #374785 !important; color: #fff !important; padding: 8px 0 !important; transition: 0.4s all !important; }
+.btn-almuni:hover{color: #fff !important; background: #121d46 !important;}
+.container .content{margin-top: 40px;}
+.almuni-default{padding: 35px 0;}
+.almuni-image{height: 135px; width:135px; margin: 0 auto; border-radius: 50%; border:4px solid #374785 ; padding:5px;}
+.almuni-image .card-img-top{width: 100%; max-height: 100%; object-fit: cover; border-radius: 50%; }
+.card-almuni {padding: 20px 15px; text-align: left;}
+.almuni-info{margin-top: 15px;}
+.card-almuni .almuni-info .head{font-size: 18px; text-transform: uppercase; font-weight: bold; letter-spacing: 0.2px; line-height: 100%; }
+.card-almuni .almuni-info .title{font-size: 13px;}
+.card-almuni .almuni-info p{margin-bottom: 0px;}
+.bdr{width: 40px; height: 2px; background:#374785; margin:5px 0; }
+
+.message-almuni {color: #4f5879; font-weight: 400;padding:5px 0;}
+.message-almuni-card{-webkit-box-orient: vertical; display: -webkit-box;
+  -webkit-line-clamp: 2; overflow: hidden; text-overflow: ellipsis; white-space: normal; height: 3.4em;}
+
+/*Button Dashbaord*/
+/*Action Button*/
+.btn-action{font-size: 12px !important; padding: 5px 3px !important;}

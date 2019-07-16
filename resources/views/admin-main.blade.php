@@ -3,7 +3,7 @@
 <head>
 	<title>@yield('page-title')</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}?v=1">
 	<script src="https://kit.fontawesome.com/2f2a3d961c.js"></script>
 </head>
 <body>
@@ -49,13 +49,11 @@
 	      </ul>	
 
 	      <ul class="nav navbar-nav navbar-right">
-	      	@if(!(\Session::get('alumini_id')))
-	        <li><a href="{{ route('alumini-login-get') }}">Login</a></li>
-	         <li><a href="{{ route('alumini-register-get') }}">Register</a></li>
+	      	@if(!\Auth::check())
+	        <li><a href="{{ route('admin-login-get') }}">Login</a></li>
 	        @else
-	        	<li><a href="{{ route('alumini-edit-get') }}">Edit Details</a></li>
 	        	<li><a href="#" class="login">Logout</a></li>
-	        	<form method="post" action="{{ route('alumini-logout-post') }}" id="logout">
+	        	<form method="post" action="{{ route('admin-logout-post') }}" id="logout">
 						{{ csrf_field() }}
 				</form>
 	        @endif
