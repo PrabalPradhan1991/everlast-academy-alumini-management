@@ -45,3 +45,4 @@ body{font-family: 'Nunito', sans-serif !important;}
 /*Button Dashbaord*/
 /*Action Button*/
 .btn-action{font-size: 12px !important; padding: 5px 3px !important;}
+.btn-download{font-size: 12px; float: right !important; color: #374785; cursor: pointer; width: auto !important; padding:3px 5px !important }

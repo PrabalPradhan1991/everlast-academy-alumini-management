@@ -71,8 +71,8 @@
 		 </div> 
 	</div>	
 
-<div class=" almuni-header" style="text-align: left !important;">Almuni List:</div>
-	<div class="bdr" style="margin-bottom: 20px;">	</div>	
+<div class=" almuni-header" style="text-align: left !important;">Almuni List: <a class="btn btn-almuni btn-download" title="Click a button to download file.">Download &nbsp;<i class="fas fa-download"></i> </a></div>
+	<div class="bdr" style="margin-bottom: 20px; clear:both;">	</div>	
 <div class="table-responsive">	
 	<table class="table maintable-bordered table-striped">
 		<thead>
