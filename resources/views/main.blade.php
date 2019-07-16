@@ -7,26 +7,7 @@
 	<script src="https://kit.fontawesome.com/2f2a3d961c.js"></script>
 </head>
 <body>
-	<div class="container">
-		@if(\Session::has('success-msg'))
-		<div class="alert alert-success alert-dismissible">
-			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<p>{{ \Session::get('success-msg') }}</p>
-		</div>
-		@endif
-		@if(\Session::has('error-msg'))
-		<div class="alert alert-danger alert-dismissible">
-			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<p>{{ \Session::get('error-msg') }}</p>
-		</div>
-		@endif
-		@if(\Session::has('warning-msg'))
-		<div class="alert alert-warning alert-dismissible">
-			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-			<p>{{ \Session::get('warning-msg') }}</p>
-		</div>
-		@endif
-	</div>
+	
 	<nav class="navbar navbar-default everlast-bg">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -63,6 +44,26 @@
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+	<div class="container">
+		@if(\Session::has('success-msg'))
+		<div class="alert alert-success alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<p>{{ \Session::get('success-msg') }}</p>
+		</div>
+		@endif
+		@if(\Session::has('error-msg'))
+		<div class="alert alert-danger alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<p>{{ \Session::get('error-msg') }}</p>
+		</div>
+		@endif
+		@if(\Session::has('warning-msg'))
+		<div class="alert alert-warning alert-dismissible">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<p>{{ \Session::get('warning-msg') }}</p>
+		</div>
+		@endif
+	</div>
 	<div class="container">
 		<div class="content">
 			@yield('content')

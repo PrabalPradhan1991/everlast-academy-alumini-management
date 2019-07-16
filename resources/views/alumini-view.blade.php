@@ -42,7 +42,7 @@
 	
 					
 				
-			    	<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal-{{ $d->id }}">Go somewhere</a>
+			    	<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal-{{ $d->id }}">Read More</a>
 			  </div>
 			</div>
 		</div>
